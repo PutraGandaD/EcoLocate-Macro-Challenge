@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnRegister: Button = binding.btnRegister
         btnRegister.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View) {
@@ -33,6 +34,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_register -> {
                 val intent = Intent(this@MainActivity, RegisterActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.btn_login_google -> {
+                val intent = Intent(this@MainActivity, HomeActivity::class.java)
                 startActivity(intent)
             }
         }
