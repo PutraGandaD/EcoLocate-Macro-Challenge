@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/silver"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:padding="16dp">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/login_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/silver"
+        android:elevation="2dp"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,20 +22,126 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Login"
+            android:text="Masuk"
             style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-            android:fontFamily="@font/inter_bold"/>
+            android:fontFamily="@font/inter_extrabold"/>
 
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/tv_tesLogin"
+        android:id="@+id/email_form_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ini Halaman Login"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="E-mail / No Telepon"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_toolbar" />
+
+    <EditText
+        android:id="@+id/login_email_form"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_input_form"
+        android:drawableLeft="@drawable/email_login_icon"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/inter_regular"
+        android:hint="Masukkan E-mail / No Telepon Anda"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#ddaaaaaa"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_form_title" />
+
+    <TextView
+        android:id="@+id/password_form_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="Kata Sandi"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_email_form" />
+
+    <EditText
+        android:id="@+id/login_password_form"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_input_form"
+        android:drawableLeft="@drawable/password_login_icon"
+        android:drawableRight="@drawable/see_login_icon"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/inter_regular"
+        android:hint="Masukkan Kata Sandi Anda"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#ddaaaaaa"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_form_title" />
+
+    <TextView
+        android:id="@+id/tv_forget_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Lupa Kata Sandi?"
+        android:textColor="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_password_form" />
+
+    <Button
+        android:id="@+id/btn_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_btn_login_form"
+        android:fontFamily="@font/inter_extrabold"
+        android:text="Masuk"
+        android:textAllCaps="false"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tv_forget_pass" />
+
+    <TextView
+        android:id="@+id/tv_separatorbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:fontFamily="@font/inter_regular"
+        android:text="atau"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_login_form"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btn_logingoogle_form"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_btn_google_login_form"
+        android:fontFamily="@font/inter_extrabold"
+        android:text="Masuk Dengan Google"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_separatorbtn"
+        android:gravity="center"/>
+    <!--        android:drawableLeft="@drawable/google_login_icon"-->
+<!--        android:drawablePadding="-60dp"-->
+<!--        android:paddingLeft="70dp"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
