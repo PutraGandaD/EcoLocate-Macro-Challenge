@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_login"/>
 
     <Button
-        android:id="@+id/btn_login_google"
+        android:id="@+id/btn_login_guest"
         android:layout_width="278dp"
         android:layout_height="46dp"
         android:textAllCaps="false"
