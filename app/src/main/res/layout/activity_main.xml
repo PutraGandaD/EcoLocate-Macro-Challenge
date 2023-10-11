@@ -4,19 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/iv_logo_landing"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:src="@drawable/icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/navigation_menu"
-        app:itemIconTint="@color/colorPrimary"
-        app:itemTextColor="@color/colorPrimary"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.222" />
 
+    <TextView
+        android:id="@+id/tv_title_landing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EcoLocate"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo_landing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="192dp"
+        android:layout_height="46dp"
+        android:textAllCaps="false"
+        android:text="Daftar"
+        android:textSize="18sp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_landing"
+        android:background="@drawable/bg_btn_register"
+        android:fontFamily="@font/inter_medium"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="192dp"
+        android:layout_height="46dp"
+        android:textAllCaps="false"
+        android:text="Masuk"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_register"
+        android:background="@drawable/bg_btn_login"
+        android:fontFamily="@font/inter_medium"/>
+
+    <TextView
+        android:id="@+id/tv_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="atau"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"/>
+
+    <Button
+        android:id="@+id/btn_login_google"
+        android:layout_width="278dp"
+        android:layout_height="46dp"
+        android:textAllCaps="false"
+        android:text="Gunakan EcoLocate tanpa akun"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_separator"
+        android:background="@drawable/bg_btn_noaccount"
+        android:fontFamily="@font/inter_medium"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
