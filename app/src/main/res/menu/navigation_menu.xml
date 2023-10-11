@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@drawable/sel_a"
+        android:title="Home" />
+    <item
+        android:id="@+id/ic_locate"
+        android:icon="@drawable/sel_b"
+        android:title="Locate" />
+    <item
+        android:id="@+id/ic_pojokedu"
+        android:icon="@drawable/sel_c"
+        android:title="PojokEdu" />
+    <item
+    android:id="@+id/ic_akun"
+    android:icon="@drawable/sel_d"
+    android:title="Akun" />
+
+</menu>

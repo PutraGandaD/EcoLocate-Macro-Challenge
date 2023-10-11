@@ -1,0 +1,6 @@
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_pojokedu_p" android:state_checked="true" />
+    <item android:drawable="@drawable/ic_pojokedu" />
+
+</selector>
