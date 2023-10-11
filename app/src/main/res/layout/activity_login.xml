@@ -4,7 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/silver"
     tools:context=".LoginActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/login_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/silver"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/login_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Login"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:fontFamily="@font/inter_bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:id="@+id/tv_tesLogin"
