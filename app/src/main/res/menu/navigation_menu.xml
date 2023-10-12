@@ -1,19 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/ic_home"
-        android:icon="@drawable/sel_a"
-        android:title="Home" />
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Beranda" />
     <item
-        android:id="@+id/ic_locate"
-        android:icon="@drawable/sel_b"
-        android:title="Locate" />
+        android:id="@+id/temukan"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Temukan" />
     <item
-        android:id="@+id/ic_pojokedu"
-        android:icon="@drawable/sel_c"
-        android:title="PojokEdu" />
+        android:id="@+id/pojokedu"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:title="Pojok Edukasi" />
     <item
-    android:id="@+id/ic_akun"
-    android:icon="@drawable/sel_d"
-    android:title="Akun" />
-
+        android:id="@+id/profil"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profil" />
 </menu>
