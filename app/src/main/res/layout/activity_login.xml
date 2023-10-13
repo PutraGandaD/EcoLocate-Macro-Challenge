@@ -8,13 +8,11 @@
     tools:context=".LoginActivity"
     android:padding="16dp">
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/login_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/silver"
-        android:elevation="1dp"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -26,7 +24,7 @@
             style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
             android:fontFamily="@font/inter_semibold"/>
 
-    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <TextView
         android:id="@+id/email_form_title"
@@ -98,12 +96,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_password_form" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login_form"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/bg_btn_login_form"
+        app:backgroundTint="@color/vibrant_green"
+        app:cornerRadius="15dp"
         android:fontFamily="@font/inter_bold"
         android:text="Masuk"
         android:textColor="@color/white"
@@ -127,12 +126,13 @@
         app:layout_constraintTop_toBottomOf="@id/btn_login_form"
         android:layout_marginTop="8dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_logingoogle_form"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/bg_btn_google_login_form"
+        app:backgroundTint="@color/forest_green"
+        app:cornerRadius="15dp"
         android:fontFamily="@font/inter_bold"
         android:text="Masuk Dengan Google"
         android:textColor="@color/white"
@@ -141,6 +141,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_separatorbtn"
+        style="@style/Widget.Material3.Button.Icon"
         android:gravity="center"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

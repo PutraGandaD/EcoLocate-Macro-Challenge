@@ -31,10 +31,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_register"
         android:layout_width="192dp"
-        android:layout_height="46dp"
+        android:layout_height="55dp"
         android:textAllCaps="false"
         android:text="Daftar"
         android:textColor="@color/white"
@@ -43,13 +43,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title_landing"
-        android:background="@drawable/bg_btn_register"
+        app:backgroundTint="@color/forest_green"
         android:fontFamily="@font/inter_medium"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login"
         android:layout_width="192dp"
-        android:layout_height="46dp"
+        android:layout_height="55dp"
         android:textAllCaps="false"
         android:text="Masuk"
         android:textColor="@color/white"
@@ -58,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_register"
-        android:background="@drawable/bg_btn_login"
+        app:backgroundTint="@color/vibrant_green"
         android:fontFamily="@font/inter_medium"/>
 
     <TextView
@@ -72,10 +72,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login_guest"
         android:layout_width="278dp"
-        android:layout_height="46dp"
+        android:layout_height="55dp"
         android:textAllCaps="false"
         android:text="Gunakan EcoLocate tanpa akun"
         android:textColor="@color/white"
@@ -84,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_separator"
-        android:background="@drawable/bg_btn_noaccount"
-        android:fontFamily="@font/inter_medium"/>
+        app:backgroundTint="@color/vibrant_green"
+        android:fontFamily="@font/inter_medium" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
