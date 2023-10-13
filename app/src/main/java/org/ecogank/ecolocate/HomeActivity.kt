@@ -1,17 +1,22 @@
 package org.ecogank.ecolocate
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
-import androidx.fragment.app.replace
 import org.ecogank.ecolocate.databinding.ActivityHomeBinding
+
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val windowInsetsControllerCompat = WindowInsetsControllerCompat(
+            window, window.decorView
+        )
+        windowInsetsControllerCompat.isAppearanceLightNavigationBars = true
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
 
