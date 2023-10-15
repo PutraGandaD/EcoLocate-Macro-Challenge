@@ -22,14 +22,14 @@ class HomeActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        replaceFragment(Home())
+        replaceFragment(BerandaFragment())
 
         binding.bottomNavBar.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.home -> replaceFragment(Home())
-                R.id.temukan -> replaceFragment(Temukan())
-                R.id.pojokedu -> replaceFragment(PojokEdukasi())
-                R.id.profil -> replaceFragment(Profil())
+                R.id.home -> replaceFragment(BerandaFragment())
+                R.id.temukan -> replaceFragment(TemukanFragment())
+                R.id.pojokedu -> replaceFragment(PojokEdukasiFragment())
+                R.id.profil -> replaceFragment(BerandaFragment())
                 else -> {
 
                 }
