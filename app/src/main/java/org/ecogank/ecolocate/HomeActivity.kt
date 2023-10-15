@@ -29,7 +29,7 @@ class HomeActivity : AppCompatActivity() {
                 R.id.home -> replaceFragment(BerandaFragment())
                 R.id.temukan -> replaceFragment(TemukanFragment())
                 R.id.pojokedu -> replaceFragment(PojokEdukasiFragment())
-                R.id.profil -> replaceFragment(BerandaFragment())
+                R.id.profil -> replaceFragment(ProfilFragment())
                 else -> {
 
                 }
