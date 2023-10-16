@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import org.ecogank.ecolocate.databinding.ActivityHomeBinding
 
 
@@ -37,6 +38,7 @@ class HomeActivity : AppCompatActivity() {
 
             true
         }
+
     }
 
     private fun replaceFragment(fragment: Fragment) {
