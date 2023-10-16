@@ -8,13 +8,14 @@
     tools:context=".BerandaFragment">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/beranda_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -46,19 +47,19 @@
                 android:id="@+id/btn_shortcut_1"
                 android:layout_width="65dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginStart="45dp"
+                android:layout_marginTop="15dp"
                 app:backgroundTint="@color/white"
                 app:cornerRadius="15dp"
                 app:icon="@drawable/recycle"
-                app:iconTint="@color/forest_green"
-                app:iconSize="35dp"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
-                app:strokeColor="#D9D9D9"
-                app:strokeWidth="2dp"
+                app:iconSize="35dp"
+                app:iconTint="@color/forest_green"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logo_header" />
+                app:layout_constraintTop_toBottomOf="@id/logo_header"
+                app:strokeColor="#D9D9D9"
+                app:strokeWidth="2dp" />
 
             <TextView
                 android:id="@+id/tv_btn_1"
@@ -78,19 +79,19 @@
                 android:id="@+id/btn_shortcut_2"
                 android:layout_width="65dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
                 app:backgroundTint="@color/white"
                 app:cornerRadius="15dp"
                 app:icon="@drawable/non3r_bin"
-                app:iconSize="35dp"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
+                app:iconSize="35dp"
                 app:iconTint="@color/forest_green"
-                app:strokeColor="#D9D9D9"
-                app:strokeWidth="2dp"
                 app:layout_constraintLeft_toRightOf="@id/btn_shortcut_1"
-                app:layout_constraintTop_toBottomOf="@id/logo_header" />
+                app:layout_constraintTop_toBottomOf="@id/logo_header"
+                app:strokeColor="#D9D9D9"
+                app:strokeWidth="2dp" />
 
             <TextView
                 android:id="@+id/tv_btn_2"
@@ -110,19 +111,19 @@
                 android:id="@+id/btn_shortcut_3"
                 android:layout_width="65dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
                 app:backgroundTint="@color/white"
                 app:cornerRadius="15dp"
                 app:icon="@drawable/saved_tps"
-                app:iconTint="@color/forest_green"
-                app:iconSize="40dp"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
-                app:strokeColor="#D9D9D9"
-                app:strokeWidth="2dp"
+                app:iconSize="40dp"
+                app:iconTint="@color/forest_green"
                 app:layout_constraintLeft_toRightOf="@id/btn_shortcut_2"
-                app:layout_constraintTop_toBottomOf="@id/logo_header" />
+                app:layout_constraintTop_toBottomOf="@id/logo_header"
+                app:strokeColor="#D9D9D9"
+                app:strokeWidth="2dp" />
 
             <TextView
                 android:id="@+id/tv_btn_3"
@@ -130,11 +131,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="3dp"
-                android:gravity="center"
                 android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="Lokasi TPS\nTersimpan"
                 android:textColor="@color/black"
                 android:textSize="13dp"
-                android:text="Lokasi TPS\nTersimpan"
                 app:layout_constraintLeft_toRightOf="@id/tv_btn_2"
                 app:layout_constraintTop_toBottomOf="@id/btn_shortcut_3" />
 
@@ -147,14 +148,14 @@
                 app:backgroundTint="@color/white"
                 app:cornerRadius="15dp"
                 app:icon="@drawable/saved_post"
-                app:iconSize="35dp"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
+                app:iconSize="35dp"
                 app:iconTint="@color/forest_green"
-                app:strokeColor="#D9D9D9"
-                app:strokeWidth="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logo_header" />
+                app:layout_constraintTop_toBottomOf="@id/logo_header"
+                app:strokeColor="#D9D9D9"
+                app:strokeWidth="2dp" />
 
             <TextView
                 android:id="@+id/tv_btn_4"
@@ -174,22 +175,22 @@
                 android:id="@+id/tv_header_bacaan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bacaan untuk anda"
-                android:textColor="@color/black"
-                android:fontFamily="@font/poppins_bold"
-                android:textSize="18dp"
-                app:layout_constraintTop_toBottomOf="@id/tv_btn_1"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="18dp"
-                android:drawablePadding="3dp"/>
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Bacaan untuk anda"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_btn_1" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_bacaan_beranda"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:clipToPadding="false"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -198,5 +199,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/bs_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" >
+            <include layout="@layout/bs_dialog_layout" />
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
