@@ -5,11 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
+import org.ecogank.ecolocate.Model.MapsTPSData
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -17,16 +20,19 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class TemukanFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var locationArrayList : ArrayList<MapsTPSData>? = null
+
+    private val callback = OnMapReadyCallback { googleMap ->
+        for (i in locationArrayList!!.indices) {
+            googleMap.addMarker(MarkerOptions().position(LatLng(locationArrayList!![i].latitude, locationArrayList!![i].longitude)).title(locationArrayList!![i].placeName).snippet(locationArrayList!![i].placeAddress))
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(locationArrayList!![2].latitude, locationArrayList!![2].longitude), 15.0f))
+            googleMap.animateCamera(CameraUpdateFactory.zoomTo(14.0f), 2000, null)
+            googleMap.mapType = GoogleMap.MAP_TYPE_NORMAL
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
@@ -37,23 +43,15 @@ class TemukanFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_temukan, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Temukan.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            TemukanFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val mapFragment = childFragmentManager.findFragmentById(R.id.fragment_maps) as SupportMapFragment?
+        mapFragment?.getMapAsync(callback)
+
+        locationArrayList = ArrayList()
+        locationArrayList!!.add(MapsTPSData(-2.961700781169533, 104.74892014785055, "Location 1", "Jalan Taqwa 1"))
+        locationArrayList!!.add(MapsTPSData(-2.9831295839366834, 104.74686021144464, "Location 2", "Jalan Taqwa 2"))
+        locationArrayList!!.add(MapsTPSData(-2.9814152950450232, 104.77484101429141, "Location 3", "Jalan Taqwa 3"))
     }
 }
