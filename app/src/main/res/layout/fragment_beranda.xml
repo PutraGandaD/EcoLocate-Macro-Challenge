@@ -21,6 +21,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:contentDescription="@string/header"
                 android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,6 +35,7 @@
 
             <ImageView
                 android:id="@+id/logo_header"
+                android:contentDescription="@string/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
@@ -69,9 +71,11 @@
                 android:layout_marginTop="3dp"
                 android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
-                android:text="TPS 3R\nTerdekat"
+                android:text="@string/tps_terdekat"
+                android:minHeight="48dp"
                 android:textColor="@color/black"
-                android:textSize="13dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btn_shortcut_1" />
 
@@ -101,9 +105,11 @@
                 android:layout_marginTop="3dp"
                 android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
-                android:text="TPS Non 3R\nTerdekat"
+                android:text="@string/tps_nt"
+                android:minHeight="48dp"
                 android:textColor="@color/black"
-                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toRightOf="@id/tv_btn_1"
                 app:layout_constraintTop_toBottomOf="@id/btn_shortcut_2" />
 
@@ -133,9 +139,11 @@
                 android:layout_marginTop="3dp"
                 android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
-                android:text="Lokasi TPS\nTersimpan"
+                android:text="@string/saved_loc"
+                android:minHeight="48dp"
                 android:textColor="@color/black"
-                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toRightOf="@id/tv_btn_2"
                 app:layout_constraintTop_toBottomOf="@id/btn_shortcut_3" />
 
@@ -165,9 +173,11 @@
                 android:layout_marginTop="3dp"
                 android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
-                android:text="Bacaan\nTersimpan"
+                android:text="@string/saved_artic"
+                android:minHeight="48dp"
                 android:textColor="@color/black"
-                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toRightOf="@id/tv_btn_3"
                 app:layout_constraintTop_toBottomOf="@id/btn_shortcut_4" />
 
@@ -179,9 +189,9 @@
                 android:layout_marginTop="18dp"
                 android:drawablePadding="3dp"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Bacaan untuk anda"
+                android:text="@string/artic_fy"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_btn_1" />
 
@@ -202,7 +212,8 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent">
         <FrameLayout
             android:id="@+id/bs_dialog"
             android:layout_width="match_parent"
