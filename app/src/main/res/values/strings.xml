@@ -3,4 +3,11 @@
     <string name="banksampah">Bank Sampah \"Bersih Hidup\"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="header">header</string>
+    <string name="logo">logo header</string>
+    <string name="tps_terdekat">Lokasi TPS Tersimpan</string>
+    <string name="tps_nt">TPS Non 3R Terdekat</string>
+    <string name="saved_loc">Lokasi TPS Tersimpan</string>
+    <string name="saved_artic">Bacaan Tersimpan</string>
+    <string name="artic_fy">Bacaan untuk anda</string>
 </resources>
