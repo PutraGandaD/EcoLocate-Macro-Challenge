@@ -34,25 +34,28 @@
 
         <activity
             android:name=".HomeActivity"
-            android:exported="false"
-            android:theme="@style/TemaBeranda.EcoLocate" />
+            android:exported="false" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/NavbarTranslucent.Theme.EcoLocate"/>
         <activity
             android:name=".DetailBacaanBerandaActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/NavbarTranslucent.Theme.EcoLocate"/>
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Translucent.Theme.EcoLocate"/>
         <activity
             android:name=".SplashActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Translucent.Theme.EcoLocate">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

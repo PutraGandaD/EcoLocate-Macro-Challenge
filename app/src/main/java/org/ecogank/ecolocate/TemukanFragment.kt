@@ -2,6 +2,7 @@ package org.ecogank.ecolocate
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.location.Location
 import android.net.Uri
 import androidx.fragment.app.Fragment
