@@ -12,6 +12,8 @@ import org.ecogank.ecolocate.R
 class BacaanBerandaAdapter (private val bacaanList : ArrayList<BacaanBeranda>) :
     RecyclerView.Adapter<BacaanBerandaAdapter.bacaanBerandaViewHolder>(){
 
+    var onItemClick: ((BacaanBeranda) -> Unit)? = null
+
     inner class bacaanBerandaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgBacaan : ImageView = itemView.findViewById(R.id.iv_bacaan_beranda)
         val judulBacaan : TextView = itemView.findViewById(R.id.tv_bacaan_beranda)
@@ -31,5 +33,10 @@ class BacaanBerandaAdapter (private val bacaanList : ArrayList<BacaanBeranda>) :
 
         holder.imgBacaan.setImageResource(bacaanBeranda.image)
         holder.judulBacaan.text = bacaanBeranda.judul
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(bacaanBeranda)
+        }
+
     }
 }

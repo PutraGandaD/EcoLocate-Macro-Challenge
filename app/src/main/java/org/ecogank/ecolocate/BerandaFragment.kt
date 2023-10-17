@@ -1,10 +1,12 @@
 package org.ecogank.ecolocate
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.ecogank.ecolocate.Adapter.BacaanBerandaAdapter
@@ -39,17 +41,24 @@ class BerandaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var recyclerView : RecyclerView = view.findViewById(R.id.rv_bacaan_beranda)
+
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         val bacaanBerandaList = ArrayList<BacaanBeranda>()
 
         bacaanBerandaList.add(BacaanBeranda(R.drawable.img_bacaanberanda01, "Kenali jenis-jenis TPS yang ada di Indonesia", "dhfgdfgdfgdjfbdjfbdhbfhdfdhfhdfhdgfhdgfedhfgdhgfdgfdhgfdhgfdjkgfdjkfgdfhdgfdhf"))
-        bacaanBerandaList.add(BacaanBeranda(R.drawable.img_bacaanberanda01, "Kenali jenis-jenis TPS yang ada di Indonesia", "dhfgdfgdfgdjfbdjfbdhbfhdfdhfhdfhdgfhdgfedhfgdhgfdgfdhgfdhgfdjkgfdjkfgdfhdgfdhf"))
+        bacaanBerandaList.add(BacaanBeranda(R.drawable.img_bacaanberanda01, "Kenali jenis-jenis TPS yang ada di Amerika", "dhfgdfgdfgdjfbdjfbdhbfhdfdhfhdfhdgfhdgfedhfgdhgfdgfdhgfdhgfdjkgfdjkfgdfhdgfdhf"))
         bacaanBerandaList.add(BacaanBeranda(R.drawable.img_bacaanberanda01, "Kenali jenis-jenis TPS yang ada di Indonesia", "dhfgdfgdfgdjfbdjfbdhbfhdfdhfhdfhdgfhdgfedhfgdhgfdgfdhgfdhgfdjkgfdjkfgdfhdgfdhf"))
         bacaanBerandaList.add(BacaanBeranda(R.drawable.img_bacaanberanda01, "Kenali jenis-jenis TPS yang ada di Indonesia", "dhfgdfgdfgdjfbdjfbdhbfhdfdhfhdfhdgfhdgfedhfgdhgfdgfdhgfdhgfdjkgfdjkfgdfhdgfdhf"))
 
         val bacaanBerandaAdapter = BacaanBerandaAdapter(bacaanBerandaList)
         recyclerView.adapter = bacaanBerandaAdapter
+
+        bacaanBerandaAdapter.onItemClick = { clickedBacaan ->
+            val intent = Intent(requireContext(), DetailBacaanBerandaActivity::class.java)
+            intent.putExtra("bacaanberanda", clickedBacaan)
+            startActivity(intent)
+        }
     }
 }
