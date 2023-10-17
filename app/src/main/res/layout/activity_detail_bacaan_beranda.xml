@@ -4,33 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/silver"
     tools:context=".DetailBacaanBerandaActivity">
 
-    <TextView
-        android:id="@+id/tv_judul_bacaan_beranda"
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/parent_appbar_beranda"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Judul"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/silver"
+        app:liftOnScroll="true">
 
-    <TextView
-        android:id="@+id/tv_isi_bacaan_beranda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bacaan"
-        android:textSize="40sp"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/appbar_bacaan_beranda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:menu="@menu/appbar_bacaan"
+            app:navigationIcon="@drawable/baseline_arrow_back_24" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@id/parent_appbar_beranda"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_judul_bacaan_beranda" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clipToPadding="false">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/iv_isi_bacaan_beranda"
-        app:layout_constraintTop_toBottomOf="@id/tv_isi_bacaan_beranda"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+            <TextView
+                android:id="@+id/tv_judul_bacaan_beranda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:maxLines="3"
+                android:text="Judul Bacaan"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <ImageView
+                android:id="@+id/iv_isi_bacaan_beranda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_bacaanberanda01"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_judul_bacaan_beranda" />
+
+            <TextView
+                android:id="@+id/tv_isi_bacaan_beranda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ini deskripsi"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter_regular"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_isi_bacaan_beranda" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

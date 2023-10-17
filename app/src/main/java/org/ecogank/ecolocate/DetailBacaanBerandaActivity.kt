@@ -1,16 +1,52 @@
 package org.ecogank.ecolocate
 
+import android.content.Intent
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import org.ecogank.ecolocate.Model.BacaanBeranda
+import org.ecogank.ecolocate.databinding.ActivityDetailBacaanBerandaBinding
+import org.ecogank.ecolocate.databinding.ActivityHomeBinding
 
 class DetailBacaanBerandaActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityDetailBacaanBerandaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_bacaan_beranda)
+
+        binding = ActivityDetailBacaanBerandaBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+        binding.appbarBacaanBeranda.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
+        binding.appbarBacaanBeranda.setOnMenuItemClickListener { menuItem ->
+            when(menuItem.itemId) {
+                R.id.menu_more -> {
+
+                    true
+                }
+                R.id.menu_save -> {
+
+                    true
+                }
+                R.id.menu_share -> {
+                    val shareIntent = Intent(Intent.ACTION_SEND)
+                    shareIntent.type = "text/plain"
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, "Your text to share goes here")
+
+                    // Start the activity for sharing
+                    startActivity(Intent.createChooser(shareIntent, "Share via"))
+
+                    true
+                }
+                else -> false
+            }
+        }
+
 
         val bacaan = intent.getParcelableExtra<BacaanBeranda>("bacaanberanda")
         if (bacaan != null) {
