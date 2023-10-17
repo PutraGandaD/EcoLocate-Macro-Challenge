@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_profil"
+    app:startDestination="@id/profilFragment">
+
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="org.ecogank.ecolocate.ProfilFragment"
+        android:label="ProfilFragment" >
+        <action
+            android:id="@+id/action_profilFragment_to_profilEditFragment"
+            app:destination="@id/profilEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilEditFragment"
+        android:name="org.ecogank.ecolocate.ProfilEditFragment"
+        android:label="ProfilEditFragment" />
+</navigation>

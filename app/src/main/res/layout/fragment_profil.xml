@@ -11,7 +11,7 @@
         android:id="@+id/profil_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@color/silver"
         app:layout_constraintTop_toTopOf="parent">
 

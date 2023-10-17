@@ -30,6 +30,7 @@ class HomeActivity : AppCompatActivity() {
                 R.id.temukan -> replaceFragment(TemukanFragment())
                 R.id.pojokedu -> replaceFragment(PojokEdukasiFragment())
                 R.id.profil -> replaceFragment(ProfilFragment())
+//                R.id.profil -> replaceFragment(ProfilEditFragment())
                 else -> {
 
                 }
