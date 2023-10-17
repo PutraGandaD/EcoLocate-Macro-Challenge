@@ -81,7 +81,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="20dp"
                 app:backgroundTint="@color/white"
-                app:cornerRadius="15dp"
+                app:cornerRadius="10dp"
                 app:icon="@drawable/non3r_bin"
                 app:iconSize="35dp"
                 app:iconGravity="textStart"
@@ -89,6 +89,7 @@
                 app:iconTint="@color/forest_green"
                 app:strokeColor="#D9D9D9"
                 app:strokeWidth="2dp"
+                app:elevation="4dp"
                 app:layout_constraintLeft_toRightOf="@id/btn_shortcut_1"
                 app:layout_constraintTop_toBottomOf="@id/logo_header" />
 
@@ -177,7 +178,7 @@
                 android:text="Bacaan untuk anda"
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppins_bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 app:layout_constraintTop_toBottomOf="@id/tv_btn_1"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="20dp"
@@ -195,6 +196,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_header_bacaan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="TPS terdekat dengan anda"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_bacaan_beranda"
+                android:layout_marginStart="20dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
