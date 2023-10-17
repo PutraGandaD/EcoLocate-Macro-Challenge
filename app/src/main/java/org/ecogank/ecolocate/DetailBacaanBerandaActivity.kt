@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import org.ecogank.ecolocate.Model.BacaanBeranda
 import org.ecogank.ecolocate.databinding.ActivityDetailBacaanBerandaBinding
 import org.ecogank.ecolocate.databinding.ActivityHomeBinding
@@ -26,11 +27,11 @@ class DetailBacaanBerandaActivity : AppCompatActivity() {
         binding.appbarBacaanBeranda.setOnMenuItemClickListener { menuItem ->
             when(menuItem.itemId) {
                 R.id.menu_more -> {
-
+                    Toast.makeText(this, "More button clicked", Toast.LENGTH_SHORT).show()
                     true
                 }
                 R.id.menu_save -> {
-
+                    Toast.makeText(this, "Save button clicked", Toast.LENGTH_SHORT).show()
                     true
                 }
                 R.id.menu_share -> {
