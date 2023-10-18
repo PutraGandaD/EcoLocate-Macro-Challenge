@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import org.ecogank.ecolocate.Adapter.BacaanBerandaAdapter
 import org.ecogank.ecolocate.Model.BacaanBeranda
 
@@ -41,6 +44,11 @@ class BerandaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var recyclerView : RecyclerView = view.findViewById(R.id.rv_bacaan_beranda)
+        val standardBottomSheet : ConstraintLayout = view.findViewById(R.id.standard_bottom_sheet)
+        val standardBottomSheetBehavior = BottomSheetBehavior.from(standardBottomSheet)
+
+        standardBottomSheetBehavior.setPeekHeight(750)
+        standardBottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
 
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
