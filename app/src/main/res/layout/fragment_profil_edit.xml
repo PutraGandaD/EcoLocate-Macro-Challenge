@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/silver"
+        android:padding="16dp"
+        tools:context=".HomeActivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/edit_profil_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="10dp"
+            android:background="@color/silver"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/edit_toolbar_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Edit Profil"
+                app:layout_constraintStart_toEndOf="@id/ic_close"
+                app:layout_constraintEnd_toStartOf="@+id/ic_ceklis" />
+
+            <ImageView
+                android:id="@+id/ic_ceklis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="15dp"
+                android:src="@drawable/ic_ceklis"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <ImageView
+            android:id="@+id/edit_profil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_foto_profil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profil_toolbar" />
+
+        <ImageView
+            android:id="@+id/ic_edit_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/ic_edit_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.63"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profil_toolbar" />
+
+        <TextView
+            android:id="@+id/nama_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Nama Lengkap"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_profil" />
+
+        <EditText
+            android:id="@+id/profil_nama_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_form"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Masukkan Nama Lengkap Anda"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#ddaaaaaa"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nama_form_title" />
+
+        <TextView
+            android:id="@+id/username_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Username"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profil_nama_form" />
+
+        <EditText
+            android:id="@+id/profil_username_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_form"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Masukkan Username Anda"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#ddaaaaaa"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username_form_title" />
+
+        <TextView
+            android:id="@+id/email_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Email"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profil_username_form" />
+
+        <EditText
+            android:id="@+id/profil_email_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_form"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Masukkan Alamat Email Anda"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#ddaaaaaa"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_form_title" />
+
+        <TextView
+            android:id="@+id/telp_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="No. Telepon"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profil_email_form" />
+
+        <EditText
+            android:id="@+id/profil_telp_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_form"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Masukkan No. Telepon Anda"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#ddaaaaaa"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/telp_form_title" />
+
+        <TextView
+            android:id="@+id/address_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Alamat Tempat Tinggal"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profil_telp_form" />
+
+        <EditText
+            android:id="@+id/profil_address_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_form"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Masukkan Alamat Tempat Tinggal Anda"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#ddaaaaaa"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_form_title" />
+
+        <TextView
+            android:id="@+id/kota_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Kota Tempat Tinggal"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profil_address_form" />
+
+        <EditText
+            android:id="@+id/profil_kota_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_form"
+            android:drawableRight="@drawable/ic_down_arrow"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Pilih Kota Tempat Tinggal Anda"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#ddaaaaaa"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kota_form_title" />
+
+        <TextView
+            android:id="@+id/provinsi_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Provinsi Tempat Tinggal"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profil_kota_form" />
+
+        <EditText
+            android:id="@+id/profil_provinsi_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_form"
+            android:drawableRight="@drawable/ic_down_arrow"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Pilih Provinsi Tempat Tinggal Anda"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#ddaaaaaa"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/provinsi_form_title" />
+
+        <TextView
+            android:id="@+id/kodepos_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Kode Pos"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profil_provinsi_form" />
+
+        <EditText
+            android:id="@+id/profil_kodepos_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_form"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Masukkan Kode Pos Alamat Anda"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#ddaaaaaa"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kodepos_form_title" />
+
+        <TextView
+            android:id="@+id/passlama_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Kata Sandi Saat Ini"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profil_kodepos_form" />
+
+        <EditText
+            android:id="@+id/profil_passlama_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_form"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Masukkan Kata Sandi Saat Ini"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#ddaaaaaa"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passlama_form_title" />
+
+        <TextView
+            android:id="@+id/passnew_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Kata Sandi Baru"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profil_passlama_form" />
+
+        <EditText
+            android:id="@+id/profil_passnew_form"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_form"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Masukkan Kata Sandi Baru"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#ddaaaaaa"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passnew_form_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
