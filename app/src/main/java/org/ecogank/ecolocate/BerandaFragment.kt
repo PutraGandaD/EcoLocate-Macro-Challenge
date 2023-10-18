@@ -46,10 +46,12 @@ class BerandaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Standard Bottom Sheet TPS Terdekat
+        val screenHeight = resources.displayMetrics.heightPixels
         val standardBottomSheet : LinearLayout = view.findViewById(R.id.standard_bottom_sheet)
         val standardBottomSheetBehavior = BottomSheetBehavior.from(standardBottomSheet)
 
-        standardBottomSheetBehavior.setPeekHeight(720)
+
+        standardBottomSheetBehavior.peekHeight = screenHeight /4
         standardBottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
 
         // Recycler View Bacaan Beranda
