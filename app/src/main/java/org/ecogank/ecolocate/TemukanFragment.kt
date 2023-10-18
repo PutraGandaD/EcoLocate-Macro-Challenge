@@ -13,11 +13,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.PackageManagerCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
@@ -30,7 +33,10 @@ import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import org.ecogank.ecolocate.Adapter.TPSTemukanAdapter
+import org.ecogank.ecolocate.Adapter.TPSTerdekatAdapter
 import org.ecogank.ecolocate.Model.MapsTPSData
+import org.ecogank.ecolocate.Model.TPSTerdekatData
 import org.ecogank.ecolocate.R
 import java.util.function.DoubleBinaryOperator
 
@@ -64,6 +70,15 @@ class TemukanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Standard Bottom Sheet TPS Terdekat - Temukan
+        //val screenHeight = resources.displayMetrics.heightPixels
+        val standardBSTemukan : LinearLayout = view.findViewById(R.id.standard_bs_temukan)
+        val standardBottomSheetBehavior = BottomSheetBehavior.from(standardBSTemukan)
+
+        standardBottomSheetBehavior.setPeekHeight(180)
+        standardBottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+
+        // Google Maps Data
         val mapFragment = childFragmentManager.findFragmentById(R.id.fragment_maps) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
 
@@ -75,6 +90,23 @@ class TemukanFragment : Fragment() {
         locationArrayList!!.add(MapsTPSData(-2.953805591495924, 104.80210474365232, "TPS Pasundan Kalidoni", "Jl. Pasundan No.32, Kalidoni, Kec. Kalidoni, Kota Palembang, Sumatera Selatan 30163"))
         locationArrayList!!.add(MapsTPSData(-2.9487353872091036, 104.73318792173534, "TPS Kota Baru", "2PWM+R9Q, Lrg. Kota Baru, Srijaya, Kec. Alang-Alang Lebar, Kota Palembang, Sumatera Selatan"))
         locationArrayList!!.add(MapsTPSData(-2.967651497386037, 104.7475436183853, "Bank Sampah Kamboja", "2PWM+R9Q, Lrg. Kota Baru, Srijaya, Kec. Alang-Alang Lebar, Kota Palembang, Sumatera Selatan"))
+
+        // Recycler View TPS Terdekat - Temukan
+        // Recycler View TPS Terdekat inside Bottom Sheet
+        val tpsTerdekatTemukanRV : RecyclerView = view.findViewById(R.id.rv_tps_temukan)
+        tpsTerdekatTemukanRV.setHasFixedSize(true)
+        tpsTerdekatTemukanRV.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+        val tpsTemukanList = ArrayList<TPSTerdekatData>()
+
+        tpsTemukanList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTemukanList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTemukanList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTemukanList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTemukanList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+
+        val tpsTemukanAdapter = TPSTemukanAdapter(tpsTemukanList)
+        tpsTerdekatTemukanRV.adapter = tpsTemukanAdapter
     }
 
     private fun showBottomSheet(placeName: String?, placeAddress: String?, latitude: Double?, longitude: Double?) {

@@ -3,35 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/standard_bs_beranda"
-    android:background="@drawable/bg_bottomsheet_beranda"
     android:orientation="vertical"
+    android:id="@+id/standard_bs_temukan"
+    android:background="@drawable/bg_bottomsheet_temukan"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <ImageView
+        android:id="@+id/iv_separator_bs_temukan"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/baseline_horizontal_rule_24"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_horizontal_rule_gray_24"
         android:scaleX="3"
         android:scaleY="1.5"/>
 
     <TextView
-        android:id="@+id/tv_header_tps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="TPS Terdekat di Lokasi Anda"
+        android:textColor="@color/black"
         android:fontFamily="@font/inter_bold"
-        android:text="TPS Terdekat dengan anda"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_marginStart="20dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_tps_terdekat"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="20dp"
+        android:textSize="22sp"
+        android:layout_gravity="center"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tps_temukan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
+        android:clipToPadding="false"/>
+
 
 </LinearLayout>
