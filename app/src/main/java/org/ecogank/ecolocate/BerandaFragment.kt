@@ -13,7 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import org.ecogank.ecolocate.Adapter.BacaanBerandaAdapter
+import org.ecogank.ecolocate.Adapter.TPSTerdekatAdapter
 import org.ecogank.ecolocate.Model.BacaanBeranda
+import org.ecogank.ecolocate.Model.TPSTerdekatData
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,15 +45,17 @@ class BerandaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var recyclerView : RecyclerView = view.findViewById(R.id.rv_bacaan_beranda)
-        val standardBottomSheet : ConstraintLayout = view.findViewById(R.id.standard_bottom_sheet)
+        // Standard Bottom Sheet TPS Terdekat
+        val standardBottomSheet : LinearLayout = view.findViewById(R.id.standard_bottom_sheet)
         val standardBottomSheetBehavior = BottomSheetBehavior.from(standardBottomSheet)
 
-        standardBottomSheetBehavior.setPeekHeight(750)
+        standardBottomSheetBehavior.setPeekHeight(72git0)
         standardBottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
 
-        recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        // Recycler View Bacaan Beranda
+        var bacaanBerandaRV : RecyclerView = view.findViewById(R.id.rv_bacaan_beranda)
+        bacaanBerandaRV.setHasFixedSize(true)
+        bacaanBerandaRV.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         val bacaanBerandaList = ArrayList<BacaanBeranda>()
 
@@ -61,12 +65,28 @@ class BerandaFragment : Fragment() {
         bacaanBerandaList.add(BacaanBeranda(R.drawable.img_bacaanberanda01, "Kenali jenis-jenis TPS yang ada di Indonesia", "dhfgdfgdfgdjfbdjfbdhbfhdfdhfhdfhdgfhdgfedhfgdhgfdgfdhgfdhgfdjkgfdjkfgdfhdgfdhf"))
 
         val bacaanBerandaAdapter = BacaanBerandaAdapter(bacaanBerandaList)
-        recyclerView.adapter = bacaanBerandaAdapter
+        bacaanBerandaRV.adapter = bacaanBerandaAdapter
 
         bacaanBerandaAdapter.onItemClick = { clickedBacaan ->
             val intent = Intent(requireContext(), DetailBacaanBerandaActivity::class.java)
             intent.putExtra("bacaanberanda", clickedBacaan)
             startActivity(intent)
         }
+
+        // Recycler View TPS Terdekat inside Bottom Sheet
+        var tpsTerdekatBerandaRV : RecyclerView = view.findViewById(R.id.rv_tps_terdekat)
+        tpsTerdekatBerandaRV.setHasFixedSize(true)
+        tpsTerdekatBerandaRV.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+
+        val tpsTerdekatList = ArrayList<TPSTerdekatData>()
+
+        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+
+        val tpsTerdekatAdapter = TPSTerdekatAdapter(tpsTerdekatList)
+        tpsTerdekatBerandaRV.adapter = tpsTerdekatAdapter
     }
 }
