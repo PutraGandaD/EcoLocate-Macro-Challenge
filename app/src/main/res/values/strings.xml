@@ -2,4 +2,16 @@
     <string name="app_name">EcoLocate</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="beranda">Beranda</string>
+    <string name="temukan">Temukan</string>
+    <string name="pojok_edukasi">Pojok Edukasi</string>
+    <string name="profil">Profil</string>
+    <string name="tps_terdekat">Lokasi TPS Tersimpan</string>
+    <string name="tps_nt">TPS Non 3R Terdekat</string>
+    <string name="saved_loc">Lokasi TPS Tersimpan</string>
+    <string name="saved_artic">Bacaan Tersimpan</string>
+    <string name="artic_fy">Bacaan untuk anda</string>
+    <string name="more">more</string>
+    <string name="share">share</string>
+    <string name="save">save</string>
 </resources>

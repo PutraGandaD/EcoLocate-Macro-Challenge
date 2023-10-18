@@ -8,18 +8,20 @@
     tools:context=".BerandaFragment">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/beranda_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
+                android:contentDescription="@null"
                 android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -33,6 +35,7 @@
 
             <ImageView
                 android:id="@+id/logo_header"
+                android:contentDescription="@null"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
@@ -42,171 +45,202 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_shortcut_1"
-                android:layout_width="65dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="45dp"
-                app:backgroundTint="@color/white"
-                app:cornerRadius="15dp"
-                app:icon="@drawable/recycle"
-                app:iconTint="@color/forest_green"
-                app:iconSize="35dp"
-                app:iconGravity="textStart"
-                app:iconPadding="0dp"
-                app:strokeColor="#D9D9D9"
-                app:strokeWidth="2dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_group_header"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logo_header" />
-
-            <TextView
-                android:id="@+id/tv_btn_1"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="3dp"
-                android:fontFamily="@font/poppins_regular"
-                android:gravity="center"
-                android:text="TPS 3R\nTerdekat"
-                android:textColor="@color/black"
-                android:textSize="13dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btn_shortcut_1" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_shortcut_2"
-                android:layout_width="65dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="20dp"
-                app:backgroundTint="@color/white"
-                app:cornerRadius="10dp"
-                app:icon="@drawable/non3r_bin"
-                app:iconSize="35dp"
-                app:iconGravity="textStart"
-                app:iconPadding="0dp"
-                app:iconTint="@color/forest_green"
-                app:strokeColor="#D9D9D9"
-                app:strokeWidth="2dp"
-                app:elevation="4dp"
-                app:layout_constraintLeft_toRightOf="@id/btn_shortcut_1"
-                app:layout_constraintTop_toBottomOf="@id/logo_header" />
-
-            <TextView
-                android:id="@+id/tv_btn_2"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="3dp"
-                android:fontFamily="@font/poppins_regular"
-                android:gravity="center"
-                android:text="TPS Non 3R\nTerdekat"
-                android:textColor="@color/black"
-                android:textSize="13dp"
-                app:layout_constraintLeft_toRightOf="@id/tv_btn_1"
-                app:layout_constraintTop_toBottomOf="@id/btn_shortcut_2" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_shortcut_3"
-                android:layout_width="65dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="20dp"
-                app:backgroundTint="@color/white"
-                app:cornerRadius="15dp"
-                app:icon="@drawable/saved_tps"
-                app:iconTint="@color/forest_green"
-                app:iconSize="40dp"
-                app:iconGravity="textStart"
-                app:iconPadding="0dp"
-                app:strokeColor="#D9D9D9"
-                app:strokeWidth="2dp"
-                app:layout_constraintLeft_toRightOf="@id/btn_shortcut_2"
-                app:layout_constraintTop_toBottomOf="@id/logo_header" />
-
-            <TextView
-                android:id="@+id/tv_btn_3"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="3dp"
-                android:gravity="center"
-                android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/black"
-                android:textSize="13dp"
-                android:text="Lokasi TPS\nTersimpan"
-                app:layout_constraintLeft_toRightOf="@id/tv_btn_2"
-                app:layout_constraintTop_toBottomOf="@id/btn_shortcut_3" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_shortcut_4"
-                android:layout_width="65dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="45dp"
-                app:backgroundTint="@color/white"
-                app:cornerRadius="15dp"
-                app:icon="@drawable/saved_post"
-                app:iconSize="35dp"
-                app:iconGravity="textStart"
-                app:iconPadding="0dp"
-                app:iconTint="@color/forest_green"
-                app:strokeColor="#D9D9D9"
-                app:strokeWidth="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logo_header" />
+                app:layout_constraintTop_toBottomOf="@id/header">
 
-            <TextView
-                android:id="@+id/tv_btn_4"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="3dp"
-                android:fontFamily="@font/poppins_regular"
-                android:gravity="center"
-                android:text="Bacaan\nTersimpan"
-                android:textColor="@color/black"
-                android:textSize="13dp"
-                app:layout_constraintLeft_toRightOf="@id/tv_btn_3"
-                app:layout_constraintTop_toBottomOf="@id/btn_shortcut_4" />
+                <com.google.android.material.button.MaterialButton
+                    android:importantForAccessibility="no"
+                    android:id="@+id/btn_shortcut_1"
+                    android:layout_width="65dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="15dp"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="15dp"
+                    app:icon="@drawable/recycle"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="35dp"
+                    app:iconTint="@color/forest_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_shortcut_2"
+                    app:strokeColor="#D9D9D9"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/tv_btn_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="@string/tps_terdekat"
+                    android:maxWidth="75dp"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_shortcut_1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:importantForAccessibility="no"
+                    android:labelFor="@id/tv_btn_2"
+                    android:id="@+id/btn_shortcut_2"
+                    android:layout_width="65dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="15dp"
+                    app:icon="@drawable/non3r_bin"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="35dp"
+                    app:iconTint="@color/forest_green"
+                    app:layout_constraintStart_toEndOf="@id/btn_shortcut_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_shortcut_3"
+                    app:strokeColor="#D9D9D9"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/tv_btn_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="@string/tps_nt"
+                    android:maxWidth="75dp"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/tv_btn_1"
+                    app:layout_constraintTop_toBottomOf="@id/btn_shortcut_2" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:importantForAccessibility="no"
+                    android:id="@+id/btn_shortcut_3"
+                    android:layout_width="65dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="15dp"
+                    app:icon="@drawable/saved_tps"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="40dp"
+                    app:iconTint="@color/forest_green"
+                    app:layout_constraintStart_toEndOf="@id/btn_shortcut_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_shortcut_4"
+                    app:strokeColor="#D9D9D9"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/tv_btn_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="@string/saved_loc"
+                    android:maxWidth="75dp"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/tv_btn_2"
+                    app:layout_constraintTop_toBottomOf="@id/btn_shortcut_3" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_shortcut_4"
+                    android:layout_width="65dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="40dp"
+                    android:importantForAccessibility="no"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="15dp"
+                    app:icon="@drawable/saved_post"
+                    app:iconGravity="textStart"
+                    android:layout_marginStart="20dp"
+                    app:iconPadding="0dp"
+                    app:iconSize="35dp"
+                    app:iconTint="@color/forest_green"
+                    app:layout_constraintStart_toEndOf="@id/btn_shortcut_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:strokeColor="#D9D9D9"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/tv_btn_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="@string/saved_artic"
+                    android:maxWidth="75dp"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/tv_btn_3"
+                    app:layout_constraintTop_toBottomOf="@id/btn_shortcut_4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/tv_header_bacaan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bacaan untuk anda"
-                android:textColor="@color/black"
-                android:fontFamily="@font/poppins_bold"
-                android:textSize="18sp"
-                app:layout_constraintTop_toBottomOf="@id/tv_btn_1"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="18dp"
-                android:drawablePadding="3dp"/>
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/artic_fy"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_group_header" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_bacaan_beranda"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:clipToPadding="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_header_bacaan" />
-            
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
-    
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/coor_layout">
 
-        <include layout="@layout/bottomsheet_beranda"/>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coor_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/bottomsheet_beranda" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
