@@ -106,6 +106,12 @@ class TemukanFragment : Fragment() {
 
         val tpsTemukanAdapter = TPSTemukanAdapter(tpsTemukanList)
         tpsTerdekatTemukanRV.adapter = tpsTemukanAdapter
+
+        tpsTemukanAdapter.onItemClick = { clickedTPS ->
+            val intent = Intent(requireContext(), DetailTPSTerdekatActivity::class.java)
+            intent.putExtra("detailtpstemukan", clickedTPS)
+            startActivity(intent)
+        }
     }
 
     private fun showBottomSheet(placeName: String?, placeAddress: String?, latitude: Double?, longitude: Double?) {

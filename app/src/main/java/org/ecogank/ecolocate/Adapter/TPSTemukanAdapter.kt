@@ -12,6 +12,8 @@ import org.ecogank.ecolocate.R
 class TPSTemukanAdapter (private val tpsTemukanList: ArrayList<TPSTerdekatData>) :
     RecyclerView.Adapter<TPSTemukanAdapter.tpsTemukanViewHolder>(){
 
+    var onItemClick: ((TPSTerdekatData) -> Unit)? = null
+
     inner class tpsTemukanViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val namaTPS : TextView = itemView.findViewById(R.id.tv_nama_tps)
         val jenisTPS : TextView = itemView.findViewById(R.id.tv_tag_tps)
@@ -33,6 +35,11 @@ class TPSTemukanAdapter (private val tpsTemukanList: ArrayList<TPSTerdekatData>)
         holder.namaTPS.text = tpsTemukan.namaTPS
         holder.jenisTPS.text = tpsTemukan.jenisTPS
         holder.imgTPS.setImageResource(tpsTemukan.image)
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(tpsTemukan)
+        }
+
     }
 
 

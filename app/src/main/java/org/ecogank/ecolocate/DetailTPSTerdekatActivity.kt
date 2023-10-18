@@ -65,6 +65,19 @@ class DetailTPSTerdekatActivity : AppCompatActivity() {
             binding.tvWaTpsDetail.text = detailTPS.waTPS
             binding.tvEmailTpsDetail.text = detailTPS.emailTPS
         }
+
+        val detailTPSTemukan = intent.getParcelableExtra<TPSTerdekatData>("detailtpstemukan")
+        if (detailTPSTemukan != null) {
+            binding.tvNamaTpsDetail.text = detailTPSTemukan.namaTPS
+            binding.ivTpsDetailBeranda.setImageResource(detailTPSTemukan.image)
+            binding.tvJenisTpsDetail.text = detailTPSTemukan.jenisTPS
+            binding.tvAlamatTpsDetail.text = detailTPSTemukan.alamatTPS
+            binding.tvHariTpsDetail.text = detailTPSTemukan.hariOperasionalTPS
+            binding.tvJamTpsDetail.text = detailTPSTemukan.jamBukaTPS
+            binding.tvJenisSampahDetail.text = detailTPSTemukan.jenisSampah
+            binding.tvWaTpsDetail.text = detailTPSTemukan.waTPS
+            binding.tvEmailTpsDetail.text = detailTPSTemukan.emailTPS
+        }
     }
 
     private fun openGoogleMaps(latitude: Double?, longitude: Double?) {
