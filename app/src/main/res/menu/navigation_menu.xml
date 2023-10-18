@@ -2,17 +2,17 @@
     <item
         android:id="@+id/home"
         android:icon="@drawable/sel_a"
-        android:title="Beranda" />
+        android:title="@string/beranda" />
     <item
         android:id="@+id/temukan"
         android:icon="@drawable/sel_b"
-        android:title="Temukan" />
+        android:title="@string/temukan" />
     <item
         android:id="@+id/pojokedu"
         android:icon="@drawable/sel_c"
-        android:title="Pojok Edukasi" />
+        android:title="@string/pojok_edukasi" />
     <item
         android:id="@+id/profil"
         android:icon="@drawable/sel_d"
-        android:title="Profil" />
+        android:title="@string/profil" />
 </menu>
