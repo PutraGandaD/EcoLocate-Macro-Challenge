@@ -10,35 +10,62 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="15dp">
+        android:padding="24dp">
 
         <TextView
             android:id="@+id/tv_placeName"
-            android:layout_width="350dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Place 1 ..."
             android:fontFamily="@font/inter_bold"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="24sp"
             android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat:"
+            android:fontFamily="@font/inter_medium"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_placeName"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="20dp"
+            />
 
         <TextView
             android:id="@+id/tv_placeAddress"
-            android:layout_width="350dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Street xxxxxxxxx"
             android:fontFamily="@font/inter_regular"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_placeName"
+            app:layout_constraintTop_toBottomOf="@id/tv_alamat"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latitude:"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter_medium"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_placeAddress" />
 
         <TextView
             android:id="@+id/tv_latitude"
@@ -47,12 +74,25 @@
             android:fontFamily="@font/inter_regular"
             android:text="Latitude"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:textStyle="normal"
+            app:layout_constraintTop_toBottomOf="@id/latitude"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_placeAddress"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Longitude:"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter_medium"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_latitude" />
 
         <TextView
             android:id="@+id/tv_longitude"
@@ -61,10 +101,10 @@
             android:fontFamily="@font/inter_regular"
             android:text="Longitude"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_latitude"
+            app:layout_constraintTop_toBottomOf="@id/longitude"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"/>
 
@@ -74,13 +114,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="Open in Google Maps"
-            android:textSize="15sp"
+            android:textSize="14sp"
             app:cornerRadius="15dp"
             android:backgroundTint="@color/vibrant_green"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_longitude" />
+            app:layout_constraintTop_toBottomOf="@id/tv_longitude"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
