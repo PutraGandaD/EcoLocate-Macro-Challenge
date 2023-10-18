@@ -6,11 +6,14 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import org.ecogank.ecolocate.Model.BacaanBeranda
 import org.ecogank.ecolocate.Model.TPSTerdekatData
 import org.ecogank.ecolocate.R
 
 class TPSTerdekatAdapter (private val tpsTerdekatList: ArrayList<TPSTerdekatData>) :
     RecyclerView.Adapter<TPSTerdekatAdapter.tpsTerdekatViewHolder>(){
+
+    var onItemClick: ((TPSTerdekatData) -> Unit)? = null
 
     inner class tpsTerdekatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgTPS : ImageView = itemView.findViewById(R.id.iv_tps)
@@ -35,6 +38,11 @@ class TPSTerdekatAdapter (private val tpsTerdekatList: ArrayList<TPSTerdekatData
         holder.namaTPS.text = tpsTerdekat.namaTPS
         holder.jenisTPS.text = tpsTerdekat.jenisTPS
         holder.alamatTPS.text = tpsTerdekat.alamatTPS
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(tpsTerdekat)
+        }
+
     }
 
 

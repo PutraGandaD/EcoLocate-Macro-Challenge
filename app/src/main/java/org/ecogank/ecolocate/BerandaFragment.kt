@@ -185,13 +185,18 @@ class BerandaFragment : Fragment() {
 
         val tpsTerdekatList = ArrayList<TPSTerdekatData>()
 
-        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
-        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
-        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
-        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
-        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_bacaanberanda01, "TPS 3R Kalidoni", "TPS 3R", "Jalan Taqwa", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_tps01, "TPS 3R Putra Karya", "TPS 3R", "Jalan Taqwa Mata Merah No.11", "Organik, Non Organik, Kaleng, Plastik", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_tps02, "TPS 3R Jasa Raharja", "TPS 3R", "Jalan Mayor Zen Depan Klinik", "Organik, Non Organik, Kaleng, Plastik", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_tps03, "TPS 3R Kalidoni Mata Merah", "TPS 3R", "Jalan RE Martadinata Depan UIN RF Palembang", "Organik, Non Organik, Kaleng, Plastik", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
+        tpsTerdekatList.add(TPSTerdekatData(R.drawable.img_tps04, "TPS 3R Dua Sekayu Gaspol", "TPS 3R", "Jalan Abdul Rozak Depan UIN Palembang", "Organik, Non Organik, Kaleng, Plastik", "07.00 - 10.00", "Senin - Jum'at", "089646573222", "xxxxxx@email.com", 1.20, 2.20))
 
         val tpsTerdekatAdapter = TPSTerdekatAdapter(tpsTerdekatList)
         tpsTerdekatBerandaRV.adapter = tpsTerdekatAdapter
+
+        tpsTerdekatAdapter.onItemClick = { clickedTPS ->
+            val intent = Intent(requireContext(), DetailTPSTerdekatActivity::class.java)
+            intent.putExtra("detailtpsterdekat", clickedTPS)
+            startActivity(intent)
+        }
     }
 }
