@@ -49,7 +49,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                android:maxLines="3"
                 android:text="Judul Bacaan"
                 android:textColor="@color/black"
                 android:textSize="30sp"
@@ -59,7 +58,7 @@
             <ImageView
                 android:id="@+id/iv_isi_bacaan_beranda"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:src="@drawable/img_bacaanberanda01"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
