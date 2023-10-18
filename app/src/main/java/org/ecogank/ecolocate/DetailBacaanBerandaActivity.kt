@@ -50,6 +50,8 @@ class DetailBacaanBerandaActivity : AppCompatActivity() {
 
 
         val bacaan = intent.getParcelableExtra<BacaanBeranda>("bacaanberanda")
+        val bacaan2 = intent.getParcelableExtra<BacaanBeranda>("bacaanpojok")
+        val bacaan3 = intent.getParcelableExtra<BacaanBeranda>("bacaanpojokdua")
         if (bacaan != null) {
             val judulBacaan : TextView = findViewById(R.id.tv_judul_bacaan_beranda)
             val isiBacaan: TextView = findViewById(R.id.tv_isi_bacaan_beranda)
@@ -58,6 +60,26 @@ class DetailBacaanBerandaActivity : AppCompatActivity() {
             judulBacaan.text = bacaan.judul
             isiBacaan.text = bacaan.isiBacaan
             imgBacaan.setImageResource(bacaan.image)
+        }
+
+        if (bacaan2 != null) {
+            val judulBacaan : TextView = findViewById(R.id.tv_judul_bacaan_beranda)
+            val isiBacaan: TextView = findViewById(R.id.tv_isi_bacaan_beranda)
+            val imgBacaan: ImageView = findViewById(R.id.iv_isi_bacaan_beranda)
+
+            judulBacaan.text = bacaan2.judul
+            isiBacaan.text = bacaan2.isiBacaan
+            imgBacaan.setImageResource(bacaan2.image)
+        }
+
+        if (bacaan3 != null) {
+            val judulBacaan : TextView = findViewById(R.id.tv_judul_bacaan_beranda)
+            val isiBacaan: TextView = findViewById(R.id.tv_isi_bacaan_beranda)
+            val imgBacaan: ImageView = findViewById(R.id.iv_isi_bacaan_beranda)
+
+            judulBacaan.text = bacaan3.judul
+            isiBacaan.text = bacaan3.isiBacaan
+            imgBacaan.setImageResource(bacaan3.image)
         }
     }
 }
