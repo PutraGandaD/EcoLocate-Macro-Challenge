@@ -6,9 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -17,22 +15,12 @@ import org.ecogank.ecolocate.Adapter.TPSTerdekatAdapter
 import org.ecogank.ecolocate.Model.BacaanBeranda
 import org.ecogank.ecolocate.Model.TPSTerdekatData
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [BerandaFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BerandaFragment : Fragment() {
     // TODO: Rename and change types of parameters
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,7 +43,7 @@ class BerandaFragment : Fragment() {
         standardBottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
 
         // Recycler View Bacaan Beranda
-        var bacaanBerandaRV : RecyclerView = view.findViewById(R.id.rv_bacaan_beranda)
+        val bacaanBerandaRV : RecyclerView = view.findViewById(R.id.rv_bacaan_beranda)
         bacaanBerandaRV.setHasFixedSize(true)
         bacaanBerandaRV.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
@@ -76,7 +64,7 @@ class BerandaFragment : Fragment() {
         }
 
         // Recycler View TPS Terdekat inside Bottom Sheet
-        var tpsTerdekatBerandaRV : RecyclerView = view.findViewById(R.id.rv_tps_terdekat)
+        val tpsTerdekatBerandaRV : RecyclerView = view.findViewById(R.id.rv_tps_terdekat)
         tpsTerdekatBerandaRV.setHasFixedSize(true)
         tpsTerdekatBerandaRV.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
