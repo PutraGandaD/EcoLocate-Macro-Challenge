@@ -47,7 +47,8 @@ Untuk Frontend, kami menggunakan basis dari Material Design 3 by Google, yang da
 ![profil_page](https://github.com/PutraGandaD/EcoLocate-Macro-Challenge/assets/54593964/c470cdcf-4b70-4c60-8f40-1fd50b00b747)
 
 # How to run
-Download sebagai zip sourcecode ini dan build melalui Android Studio.
+Download sebagai zip sourcecode ini dan build melalui Android Studio. Jalankan aplikasi pada emulator dengan device frame Pixel XL agar mendapatkan
+tampilan aplikasi yang maksimal.
 
 Agar fitur Google Maps pada fitur "Temukan" berjalan dengan baik, gunakan Google Maps API Key anda sendiri yang bisa didapatkan melalui :
 https://console.cloud.google.com/apis/library/maps-android-backend.googleapis.com
