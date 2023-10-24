@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         app:itemTextColor="@color/forest_green"
         app:itemIconTint="@color/forest_green"
+        app:elevation="30dp"
         app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

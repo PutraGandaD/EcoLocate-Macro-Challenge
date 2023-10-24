@@ -38,7 +38,7 @@ class BerandaFragment : Fragment() {
         val standardBSBeranda : LinearLayout = view.findViewById(R.id.standard_bs_beranda)
         val standardBottomSheetBehavior = BottomSheetBehavior.from(standardBSBeranda)
 
-        standardBottomSheetBehavior.setPeekHeight(200)
+        standardBottomSheetBehavior.setPeekHeight(500)
         standardBottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
 
         // Recycler View Bacaan Beranda
