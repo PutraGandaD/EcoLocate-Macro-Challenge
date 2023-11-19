@@ -16,6 +16,8 @@ Berikut merupakan anggota dari grup kami beserta role nya masing-masing =
 - Dharyl Abi Yashfalaqi (Hipster)
 
 ## Tech used
+Figma Prototype Link : https://www.figma.com/file/ROwikyPzrenltRninOqeIe/DESIGN-APLIKASI-ECOLOCATE?type=design&node-id=274-3785&mode=design&t=MSxSQsZa5J2NOA4e-0
+
 Untuk Frontend, kami menggunakan basis dari Material Design 3 by Google, yang dapat diakses pada https://m3.material.io
 - Frontend =
   - [x] Basic Layouting (LinearLayout, ConstraintLayout, CoordinatorLayout)
